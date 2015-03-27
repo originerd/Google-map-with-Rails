@@ -13,5 +13,5 @@ var marker<%= google.id %> = new google.maps.Marker({
 });
 
 google.maps.event.addListener(marker<%= google.id %>, 'click', function() {
-	infowindow.open(map,marker<%= google.id %>);
+	infowindow<%= google.id %>.open(map,marker<%= google.id %>);
 });
