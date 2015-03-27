@@ -90,3 +90,11 @@ p {
   margin-top: 45px;
   @include box_sizing;
 }
+
+/* google maps */
+
+#map-canvas {
+  height: 100%;
+  margin: 0px;
+  padding: 0px
+}
