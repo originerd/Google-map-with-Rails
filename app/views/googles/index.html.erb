@@ -23,24 +23,26 @@ initialize()
 
 <div id="map-canvas"></div>
 
-<table class="table table-striped col-lg-6 col-lg-offset-3">
-  <thead>
-    <tr>
-      <th>Latlng</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @googles.each do |google| %>
+<div class="col-lg-6 col-lg-offset-3">
+  <table class="table table-striped col-lg-6 col-lg-offset-3">
+    <thead>
       <tr>
-        <td><%= link_to google.latlng, google %></td>
-        <td><%= link_to 'Edit', edit_google_path(google), class: "btn btn-primary" %></td>
-        <td><%= link_to 'Destroy', google, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+        <th>Latlng</th>
+        <th colspan="2"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @googles.each do |google| %>
+        <tr>
+          <td><%= link_to google.latlng, google %></td>
+          <td><%= link_to 'Edit', edit_google_path(google), class: "btn btn-primary" %></td>
+          <td><%= link_to 'Destroy', google, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 
 <br>
 
