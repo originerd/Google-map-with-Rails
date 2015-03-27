@@ -1,0 +1,15 @@
+var contentString<%= google.id %> = <%= google.content %>;
+
+var infowindow<%= google.id %> = new google.maps.InfoWindow({
+	content: contentString<%= google.id %>
+});
+
+var marker<%= google.id %> = new google.maps.Marker({
+	position: <%= google.latlng %>,
+	map: map,
+	title: 'Makrer <%= google.id %>'
+});
+
+google.maps.event.addListener(marker<%= google.id %>, 'click', function() {
+	infowindow.open(map,marker<%= google.id %>);
+});
