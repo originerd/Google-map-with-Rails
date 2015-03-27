@@ -1,7 +1,9 @@
 latlng<%= google.id %> = new google.maps.LatLng(<%= google.latlng %>);
 
+var contentString<%= google.id %> = '<%= to_table_tag(google.content) %>';
+
 var infowindow<%= google.id %> = new google.maps.InfoWindow({
-	content: String.raw`<%= to_table_tag(google.content) %>`
+	content: contentString<%= google.id %>
 });
 
 var marker<%= google.id %> = new google.maps.Marker({
