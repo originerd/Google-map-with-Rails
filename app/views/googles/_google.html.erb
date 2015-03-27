@@ -1,11 +1,13 @@
-var contentString<%= google.id %> = <%= google.content %>;
+latlng<%= google.id %> = new google.maps.LatLng(<%= google.latlng %>);
+
+var contentString<%= google.id %> = '<%= google.content %>';
 
 var infowindow<%= google.id %> = new google.maps.InfoWindow({
 	content: contentString<%= google.id %>
 });
 
 var marker<%= google.id %> = new google.maps.Marker({
-	position: <%= google.latlng %>,
+	position: latlng<%= google.id %>,
 	map: map,
 	title: 'Makrer <%= google.id %>'
 });
