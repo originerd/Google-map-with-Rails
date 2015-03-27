@@ -1,7 +1,5 @@
 module GooglesHelper
 
-  require 'cgi'
-
   def to_table_tag(content)
     result = '<table><tbody>'
 
@@ -13,7 +11,5 @@ module GooglesHelper
     end
 
     result += '</tbody></table>'
-
-    CGI.unescapeHTML(result)
   end
 end
