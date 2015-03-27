@@ -1,6 +1,9 @@
-<h1>Editing Google</h1>
+<% provide(:title, 'Editing') %>
+<div class="container col-lg-8 col-lg-offset-2">
+  <h1>Editing Google</h1>
 
-<%= render 'form' %>
+  <%= render 'form' %>
 
-<%= link_to 'Show', @google %> |
-<%= link_to 'Back', googles_path %>
+  <%= link_to 'Show', @google %> |
+  <%= link_to 'Back', googles_path %>
+</div>
