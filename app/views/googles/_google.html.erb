@@ -1,6 +1,6 @@
 latlng<%= google.id %> = new google.maps.LatLng(<%= google.latlng %>);
 
-var contentString<%= google.id %> = String.raw('<%= to_table_tag(google.content) %>');
+var contentString<%= google.id %> = '<%= to_table_tag(google.content) %>';
 
 var infowindow<%= google.id %> = new google.maps.InfoWindow({
 	content: contentString<%= google.id %>
