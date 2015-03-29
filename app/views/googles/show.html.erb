@@ -1,7 +1,7 @@
 <% provide(:title, @google.latlng) %>
 <h1><%= @google.latlng %></h1>
 
-<p><strong>Address: </strong><%= @google.address %></p>
+<p><strong>Address: </strong><%= get_address_via(@google.latlng) %></p>
 
 <p>
   <strong>Content:</strong>
