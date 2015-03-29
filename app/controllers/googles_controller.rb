@@ -70,6 +70,6 @@ class GooglesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def google_params
-      params.require(:google).permit(:latlng, :content)
+      params.require(:google).permit(:latlng, :address, :content)
     end
 end
