@@ -38,7 +38,7 @@ initialize()
     <% @googles.each do |google| %>
       <tr>
         <td><%= link_to google.latlng, google %></td>
-        <td><%= google.address %></td>
+        <td><%= get_address_via(google.latlng) %></td>
         <% if user_signed_in? %>
           <td><%= link_to 'Edit', edit_google_path(google), class: "btn btn-primary" %></td>
           <td><%= link_to 'Destroy', google, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
